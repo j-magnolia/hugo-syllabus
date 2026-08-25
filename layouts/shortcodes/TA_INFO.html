@@ -1,4 +1,4 @@
-{{ if isset .Site.Params.ta "url" -}}
+{{ if and (isset .Site.Params "ta") (isset .Site.Params.ta "url") -}}
 <a href="{{ .Site.Params.ta.url }}", target="_blank">{{ .Site.Params.ta.name | markdownify}}
 {{- else -}}
 {{ .Site.Params.ta.name | markdownify }}
